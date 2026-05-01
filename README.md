@@ -15,19 +15,20 @@ The goal of this project was to understand how modern sequence-to-sequence model
 
 ## Project Structure
 
-```text
-.
-├── load_dataset.py
-├── model.py
-├── training.py
-├── test.py
-├── README.md
-└── .gitignore
-My Contribution
+- `load_dataset.py` - dataset loading and tokenization
+- `model.py` - custom Transformer implementation
+- `training.py` - training loop
+- `test.py` - inference/testing script
+- `README.md` - project description
+- `.gitignore` - ignored files
+
+## My Contribution
 
 I built the full training pipeline myself, including the Transformer model architecture, encoder and decoder blocks, multi-head attention, positional encoding, padding and causal masks, dataset loading, training loop, and inference script.
 
-Sample Outputs
+## Sample Outputs
+
+```text
 EN: Are we alone?
 FR: Sommes-nouss?
 
@@ -39,26 +40,35 @@ FR: Quest-ce que la lumière?
 
 EN: Astronomes William Frederick King is born.
 FR: Astronomes Naissance de William Frederick King.
-How to Run
+```
+
+## How to Run
 
 Install the required libraries:
 
+```bash
 pip install torch pandas transformers
+```
 
 Place the English-French dataset CSV file in the project folder.
 
 Train the model:
 
+```bash
 python training.py
+```
 
 Test the model after training:
 
+```bash
 python test.py
-Checkpoint and Dataset
+```
 
-The trained model checkpoint (model.pt) and the dataset are not included in this repository to keep the repository lightweight.
+## Checkpoint and Dataset
 
-After training, training.py will generate a local model.pt checkpoint, which can then be used by test.py for inference.
+The trained model checkpoint (`model.pt`) and the dataset are not included in this repository to keep the repository lightweight.
+
+After training, `training.py` will generate a local `model.pt` checkpoint, which can then be used by `test.py` for inference.
 
 ## Note
 
