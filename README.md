@@ -9,22 +9,57 @@ The goal of this project was to understand how modern sequence-to-sequence model
 - Custom multi-head attention
 - Encoder and decoder blocks
 - Positional encoding
-- Padding and causal masks
+- Padding masks and causal masks
 - Training loop in PyTorch
 - Basic inference script for translation
 
-## My Contribution
-
-I implemented the model architecture, prepared the data pipeline, trained the model, and debugged issues related to tensor shapes, masks, and loss calculation.
-
-## Sample Outputs
+## Project Structure
 
 ```text
+.
+├── load_dataset.py
+├── model.py
+├── training.py
+├── test.py
+├── README.md
+└── .gitignore
+My Contribution
+
+I built the full training pipeline myself, including the Transformer model architecture, encoder and decoder blocks, multi-head attention, positional encoding, padding and causal masks, dataset loading, training loop, and inference script.
+
+Sample Outputs
+EN: Are we alone?
+FR: Sommes-nouss?
+
 EN: Where did we come from?
 FR: D'où venons-nous?
 
-EN: What is light?
+EN: What is light ?
 FR: Quest-ce que la lumière?
 
 EN: Astronomes William Frederick King is born.
 FR: Astronomes Naissance de William Frederick King.
+How to Run
+
+Install the required libraries:
+
+pip install torch pandas transformers
+
+Place the English-French dataset CSV file in the project folder.
+
+Train the model:
+
+python training.py
+
+Test the model after training:
+
+python test.py
+Checkpoint and Dataset
+
+The trained model checkpoint (model.pt) and the dataset are not included in this repository to keep the repository lightweight.
+
+After training, training.py will generate a local model.pt checkpoint, which can then be used by test.py for inference.
+
+## Note
+
+This project is intended for learning and experimentation, not for production-level translation quality.
